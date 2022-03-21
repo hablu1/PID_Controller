@@ -1,6 +1,11 @@
 ## Setup Carla Simulator
 ![setup](./screenshots/initial_setup.JPG)
+
 ## How to Run the Code
+copy the pid_controller.ccp and pid_controller.h file to your pid_controller folder in the provided starter code.
+The existing files need to be replaced by my files.
+Compile the code using make.
+Run carle server in background and run ./run_main_pid.sh to see the PID controller in action.
 
 ## Resluting Plots 
 ![steering_error](./screenshots/steering_error_plot.JPG)
