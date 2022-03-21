@@ -1,1 +1,1 @@
-![Screenshot](./screenshot/initial_setup.jpg)
+![plot](./screenshot/initial_setup.jpg)
