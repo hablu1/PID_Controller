@@ -6,16 +6,21 @@
 ![steering_error](./screenshots/steering_error_plot.JPG)
 ![throttle_error](./screenshots/throttle_error_plot.JPG)
 
-## Provided Questions
-
+## Questions
 ### Q1
 // Add the plots to your report and explain them (describe what you see)
+The plots are added above.
 The throttle_error_plot shows the output of the brake control signal and the throttle control signal. The error of the desired velocity and the
 actual velocity is also display as error throttle.
 The steering error plot shows the control output of the steering pid controller and the error between the x y waypoint coordiantes and the actual coordinates. 
+In both plots it can be seen that the control signal is within defined output limits of the steering and throttle pid contoller.
+Also, the bigger the error, the bigger the control signal output value.
 ### Q2
 // What is the effect of the PID according to the plots, how each part of the PID affects the control command?
-The PID controller keeps oszillating
+The PID controller keeps oszillating. 
+The proporional gain controls the biggest part of the control signal's magnitude, that is, the bigger the error between desired value and actal value, the bigger the proportional part (multiplied by the proportional gain). With the proportional gain, the ramp can be adjusted.
+The integral gain accounts for the residual error between desired and actual value. That is, if there was a big error in the past, the integral part of the PID controller will be bigger.
+The derivative part of the PID controller accounts for the change in the error. It therefore predicts the system behaviour and makes the contoller more stable. 
 ### Q3
 // How would you design a way to automatically tune the PID parameters?
 Using the Twiggle algorithm from Sebastian's class.
@@ -31,3 +36,4 @@ Cons:
 -does not account for non-linearity
 ### Q5
 // (Optional) What would you do to improve the PID controller?
+One could smooth the control signal using a filter to make the system even more stable.
