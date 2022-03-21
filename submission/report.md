@@ -1,1 +1,1 @@
-![setup](./screenshots/initial_setup.jpg)
+![setup](./screenshots/initial_setup.JPG)
