@@ -1,0 +1,1 @@
+![Screenshot](./screenshot/initial_setup.jpg)
