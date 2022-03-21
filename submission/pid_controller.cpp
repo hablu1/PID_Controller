@@ -25,7 +25,7 @@ void PID::Init(double Kpi, double Kii, double Kdi, double output_lim_maxi, doubl
     p_error = 0.0;
     i_error = 0.0;
     d_error = 0.0;
-    d_time = 0.0;
+    d_time = 1.0;
     lim_max = output_lim_maxi;
     lim_min = output_lim_mini;
 }
@@ -36,7 +36,7 @@ void PID::UpdateError(double cte) {
    /**
    * TODO: Update PID errors based on cte.
    **/
-    d_error = cte - p_error;
+    d_error = (cte - p_error)/d_time;
     p_error = cte;
     i_error += cte;
 }
